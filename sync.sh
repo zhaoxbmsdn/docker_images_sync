@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -eux #e 表示遇到异常则退出执行； x 表示 打印命令；
 
 
 # 检查参数数量是否正确
@@ -24,7 +24,7 @@ failed_count=0
 failed_images=""
 while IFS= read -r image; do
     # 拉取镜像
-    set +e
+    set +e #关闭异常退出
     docker pull "$image"
     pull_status=$?
     if [ $pull_status -ne 0 ]; then
@@ -34,7 +34,7 @@ while IFS= read -r image; do
         continue
     fi
 
-    name=$(echo "${image}" | cut -d '/' -f2)
+    name="${image##*/}"
     tag=$(echo "${name}" | cut -d ':' -f2)
     targetFullName=${TARGET_REGISTRY}/${TARGET_NAMESPACE}/${name}
 
