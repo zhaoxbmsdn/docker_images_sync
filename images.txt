@@ -1,1 +1,1 @@
-downloads.unstructured.io/unstructured-io/unstructured-api:latest
+prom/prometheus:v2.50.1
