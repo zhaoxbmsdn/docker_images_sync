@@ -1,1 +1,1 @@
-ghcr.io/immich-app/immich-server:v1.137.0
+ghcr.io/anomalyco/opencode
