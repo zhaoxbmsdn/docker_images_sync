@@ -1,1 +1,1 @@
-ghcr.io/anomalyco/opencode
+ghcr.io/hkuds/deeptutor:latest
