@@ -1,1 +1,1 @@
-ghcr.io/hkuds/deeptutor:latest
+rustfs/rustfs
